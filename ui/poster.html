@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+
   <style>
     @font-face {
       font-family: "font1";
@@ -16,12 +18,18 @@
     nav{
       white-space: nowrap;  /* 두 줄로 겹쳐진거 한 줄로 만듬 */
     }
-    .poster, .postercard{
-      text-align: center;
-      margin: 0 auto;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .poster img{
+      max-width: 300px;
+      height: auto;
     }
     .postercard{
         border-radius: 1px solid black;
+        margin-left: 20px;
     }
     
   </style>
@@ -65,7 +73,7 @@
     </div>
     </div>
   </nav>
-
+<div class="container">
   <div class="poster"><img src="../images/poster.jpg" alt="poster" onclick="poster.html"></div>
 
   <div class="postercard" style="width: 18rem;">
@@ -87,7 +95,7 @@
       <a href="moreinfo.html" class="card-link">더보기</a>
     </div>
   </div>
-
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

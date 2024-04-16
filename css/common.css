@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "font1";
+    src: url("../font/font1.ttf");
+  }
+  *{
+    font-family: "font1";
+  }
+  nav{
+    white-space: nowrap;  /* 두 줄로 겹쳐진거 한 줄로 만듬 */
+  }
