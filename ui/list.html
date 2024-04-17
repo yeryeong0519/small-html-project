@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        #columns {
+            column-width: 350px;
+            column-gap: 15px;
+            background-color: hsl(111, 50%, 85%);
+        }
+
+        #columns figure {
+            display: inline-block;
+            /* border:1px solid rgba(0,0,0,0.2); */
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            ;
+        }
+
+        #columns figure img {
+            width: 100%;
+        }
+
+        #columns figure figcaption {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin-top: 11px;
+        }
+
+        @font-face {
+            font-family: "font1";
+            src: url("../font/font1.ttf");
+        }
+
+        * {
+            font-family: "font1";
+        }
+
+        nav {
+            white-space: nowrap;
+            /* 두 줄로 겹쳐진거 한 줄로 만듬 */
+        }
+    </style>
+</head>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="main.html">
+        <img src="../images/lily.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        사진전시웹사이트
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="login.html" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            회원메뉴
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="login.html">로그인</a></li>
+            <li><a class="dropdown-item" href="join.html">회원가입</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+<body>
+    <div id="columns">
+        <figure>
+            <img src="../images/upload/upload1.jpg">
+            <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/upload/upload2.jpg">
+            <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/upload/upload3.jpg">
+            <figcaption>Belle, based on 1770’s French court fashion</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/upload/upload4.jpg">
+            <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/upload/upload5.jpg">
+            <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/upload/upload6.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>

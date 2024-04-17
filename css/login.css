@@ -45,8 +45,8 @@ html, body{
     margin-bottom: 20px;
     background: linear-gradient(to right, #270a09, #8ca6ce);
     /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: transparent;
-} */
+    /* -webkit-text-fill-color: transparent;
+} */ */
 #inputBox{
     margin: 10px;
 }
