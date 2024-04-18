@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메인페이지</title>
   <link rel="stylesheet" href="css/common.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     .card {
       width: 100%;
@@ -19,9 +20,10 @@
     #poster {
       border: 5px solid orchid;
       padding: 1px;
-      
+
     }
-    #aside{
+
+    #aside {
       position: sticky;
       top: 100px;
       right: 300px;
@@ -41,46 +43,83 @@
       white-space: nowrap;
       /* 두 줄로 겹쳐진거 한 줄로 만듬 */
     }
+
+    li{
+      font-family: "Noto Sansf KR", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+
+      color: aquamarine;
+      
+      border: 1px solid #aaa;
+      border-radius: 0.5em;
+      box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    }
+    .navbar-nav:hover{
+      border-color: #888;
+    }
+    .navbar-nav:focue{
+      border-color: #aaa;
+      box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+      box-shadow: 0 0 0 3px -moz-mac-focusring;
+      color: #222;
+      outline: none;
+    }
+    .navbar-nav:disabled{
+      opacity: 0.5;
+    }
+    
+    
   </style>
 </head>
 
 <body>
+  <header>
 
-  <div class="header">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="main.html">
-        <img src="images/lily.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        사진전시웹사이트
-      </a>
-    </div>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="list.html">둘러보기</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="login.html" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            회원메뉴
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="main.html">
+            <img src="images/lily.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            사진전시웹사이트
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="login.html">로그인</a></li>
-            <li><a class="dropdown-item" href="join.html">회원가입</a></li>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="list.html" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Photos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html">Nature</a></li>
+                <li><a class="dropdown-item" href="join.html">Animal</a></li>
+                <li><a class="dropdown-item" href="join.html">Travel</a></li>
+                <li><a class="dropdown-item" href="join.html">ALL</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="login.html" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                회원메뉴
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html">로그인</a></li>
+                <li><a class="dropdown-item" href="join.html">회원가입</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+
+    </nav>
     </div>
-    </div>
-  </nav>
-</div>
-  
+  </header>
   <div class="container mt-3">
     <div class="row">
       <article class="col">
@@ -110,31 +149,23 @@
   <br><br>
 
 
-  
+
   <!-- footer.html 삽입 -->
   <div class="bg-dark text-light py-4">
     <!-- footer.html 파일의 내용 삽입 -->
     <!-- 아래 경로는 실제 파일 위치에 맞게 수정해주세요 -->
     <div data-include="ui/footer.html"></div>
-</div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    // footer.html 파일 삽입을 위한 스크립트
-    $(function(){
-        $('[data-include]').each(function(){
-            var file = $(this).data('include');
-            $(this).load(file);
-        });
-    });
-</script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>
