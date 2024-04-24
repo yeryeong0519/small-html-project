@@ -32,8 +32,6 @@
             background-color: #f8f6d0;
         }
 
-
-
         .container-fixed {
             position: fixed;
             top: 0;
@@ -49,10 +47,12 @@
         }
 
         #columns {
-            column-width: 350px;
-            column-gap: 15px;
+    column-width: 350px;
+    column-gap: 15px;
+    box-sizing: border-box;
+    text-align: center; /* 이미지들을 중앙으로 정렬 */
+}
 
-        }
 
         #columns figure {
             display: inline-block;
@@ -66,6 +66,7 @@
 
         #columns figure img {
             width: 100%;
+            text-align: center;
         }
 
         #columns figure figcaption {
@@ -88,6 +89,9 @@
 </head>
 
 <body>
+
+
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -100,8 +104,8 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
-                    <img src="images/message.png" class="rounded me-2" alt="..." style="width: 19px; height: 19px">
-                    <strong class="me-auto">알림</strong>
+                    <img src="images/message.png" class="rounded me-2" alt="..." style="width: 10px; height: 10px">
+                    <strong class="me-auto">Bootstrap</strong>
                     <small>11 mins ago</small>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
@@ -168,37 +172,73 @@
     </div>
     <br><br>
 
-    <div id="columns">
-        <figure>
+    <div id="columns" style="text-align: center; column-count: 3;">
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload1.jpg">
             <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
         </figure>
-
-        <figure>
+    
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload2.jpg">
             <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
         </figure>
-
-        <figure>
+    
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload3.jpg">
             <figcaption>Belle, based on 1770’s French court fashion</figcaption>
         </figure>
-
-        <figure>
+    
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload4.jpg">
             <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
         </figure>
-
-        <figure>
+    
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload5.jpg">
             <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
         </figure>
-
-        <figure>
+    
+        <figure style="display: inline-block; margin: 0;">
             <img src="images/upload/upload6.jpg">
             <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
         </figure>
+<!--new-->
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload7.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload8.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload9.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload10.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload11.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload12.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
+
+        <figure style="display: inline-block; margin: 0;">
+            <img src="images/upload/upload13.jpg">
+            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+        </figure>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
