@@ -34,6 +34,8 @@
           background-color: #9ee9bf;
         }
     </style>
+    <link href="../css/common.css" rel="stylesheet" />
+    <link rel="icon" href="../images/mushroom.png"/>
 </head>
 
 <body class="text-center">
@@ -41,8 +43,24 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
-                <img src="../images/gallary.png" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">사진전시웹사이트</a>
+                <img src="../images/coffee.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Seoul International Gallary
+            </a>
+        </div>
+    
+        <button type="button" class="btn btn-primary" id="liveToastBtn" style="float: right;">새로운 알림</button>
+    
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="../images/heart.png" class="rounded me-2" alt="alert" style="width: 20px; height: 20px">                    <strong class="me-auto">Bootstrap</strong>
+                    <strong class="me-auto">알림도착</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    wlkvns83 님께서 회원님의 사진에 댓글을 남겼습니다.
+                </div>
+            </div>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="../index.html" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Photos</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Nature</a></li>
@@ -61,19 +79,19 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="../ui/login.html" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="login.html" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Membership
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../ui/login.html">로그인</a></li>
-                        <li><a class="dropdown-item" href="../ui/join.html">회원가입</a></li>
+                        <li><a class="dropdown-item" href="login.html">로그인</a></li>
+                        <li><a class="dropdown-item" href="join.html">회원가입</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-
     </nav>
+    
     
     <p>비밀번호 찾기 페이지입니다 :D</p>
 

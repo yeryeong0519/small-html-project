@@ -7,105 +7,48 @@
     <title>사진전시 웹사이트에 오신것을 환영합니다.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet" />
+    <link rel="icon" href="images/mushroom.png" />
     <style>
+        .carousel {
+            width: 70%;
+            margin: auto;
+
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-item {
+            transition-duration: 0.2s;
+            /* 1초로 설정 */
+        }
+
         .navbar {
-            background-color: #f3ec81;
-        }
-
-        .card {
-            width: 100%;
-        }
-
-        @font-face {
-            font-family: 'TTLaundryGothicB';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        * {
-            font-family: "TTLaundryGothicB";
-            text-align: center;
-        }
-
-        body {
-            background-color: #f8f6d0;
-        }
-
-        .container-fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow-y: auto;
-        }
-
-        .card {
-            width: 500px;
-            height: 510px;
-        }
-
-        #columns {
-    column-width: 350px;
-    column-gap: 15px;
-    box-sizing: border-box;
-    text-align: center; /* 이미지들을 중앙으로 정렬 */
-}
-
-
-        #columns figure {
-            display: inline-block;
-            /* border:1px solid rgba(0,0,0,0.2); */
-            margin: 0;
-            margin-bottom: 15px;
-            padding: 10px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            ;
-        }
-
-        #columns figure img {
-            width: 100%;
-            text-align: center;
-        }
-
-        #columns figure figcaption {
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            margin-top: 11px;
-        }
-
-        .btn {
-            background-color: #9ee9a4;
-        }
-
-        #liveToastBtn {
-            width: 170px;
-            height: 40px;
-            font-size: x-small;
-            background-color: #9ec9e9;
+            height: 40%;
+            width: auto;
         }
     </style>
 </head>
 
-<body>
-
-
-
+<>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="images/gallary.png" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">사진전시웹사이트</a>
+                <img src="images/coffee.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">Seoul International Gallary
+            </a>
         </div>
 
-        <button type="button" class="btn btn-primary" id="liveToastBtn" style="float: right;">새로운 알림</button>
+        <button type="button" class="btn btn-primary" id="liveToastBtn" style="float: right">새로운 알림</button>
 
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
-                    <img src="images/message.png" class="rounded me-2" alt="..." style="width: 10px; height: 10px">
-                    <strong class="me-auto">Bootstrap</strong>
+                    <img src="images/heart.png" class="rounded me-2" alt="alert" style="width: 20px; height: 20px">
+                    <strong class="me-auto">알림도착</strong>
                     <small>11 mins ago</small>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
@@ -124,10 +67,10 @@
                     <a class="nav-link dropdown-toggle" href="ui/list.html" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Photos</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Nature</a></li>
-                        <li><a class="dropdown-item" href="#">Animal</a></li>
-                        <li><a class="dropdown-item" href="#">Travel</a></li>
-                        <li><a class="dropdown-item" href="#">ALL</a></li>
+                        <li><a class="dropdown-item" href="ui/list.html">Nature</a></li>
+                        <li><a class="dropdown-item" href="ui/list.html">Animal</a></li>
+                        <li><a class="dropdown-item" href="ui/list.html">Travel</a></li>
+                        <li><a class="dropdown-item" href="ui/list.html">ALL</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -144,7 +87,39 @@
         </div>
     </nav>
 
-    <!-- 메인페이지 카드  -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/carousel1.jpg" class="d-block w-100" alt="one">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel7.jpg" class="d-block w-100" alt="seven">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel2.jpg" class="d-block w-100" alt="two">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel3.jpg" class="d-block w-100" alt="three">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel8.jpg" class="d-block w-100" alt="eight">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <!-- 메인페이지 카드 -->
     <div class="container mt-3">
         <div class="row">
             <article class="col">
@@ -172,94 +147,24 @@
     </div>
     <br><br>
 
-    <div id="columns" style="text-align: center; column-count: 3;">
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload1.jpg">
-            <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
-        </figure>
-    
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload2.jpg">
-            <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
-        </figure>
-    
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload3.jpg">
-            <figcaption>Belle, based on 1770’s French court fashion</figcaption>
-        </figure>
-    
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload4.jpg">
-            <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
-        </figure>
-    
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload5.jpg">
-            <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-        </figure>
-    
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload6.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-<!--new-->
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload7.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
+    <script>
+        // 알림창 표시 함수
+        function showToast() {
+            var toastEl = document.getElementById('liveToast');
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
 
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload8.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
+        // 알림 버튼 클릭 시 showToast 함수 호출
+        document.getElementById('liveToastBtn').addEventListener('click', showToast);
+    </script>
 
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload9.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload10.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload11.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload12.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-
-        <figure style="display: inline-block; margin: 0;">
-            <img src="images/upload/upload13.jpg">
-            <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-        </figure>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toastTrigger = document.getElementById('liveToastBtn')
-            const toastLiveExample = document.getElementById('liveToast')
-
-            if (toastTrigger) {
-                const toastBootstrap = new bootstrap.Toast(toastLiveExample)
-                toastTrigger.addEventListener('click', () => {
-                    toastBootstrap.show()
-                })
-            }
-        });
-    </script>
 </body>
 
 </html>
